@@ -1,0 +1,6 @@
+docker
+tabulate
+pytest
+pytest-cov
+jinja2
+pdfkit

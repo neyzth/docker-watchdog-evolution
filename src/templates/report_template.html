@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapport Hebdomadaire</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1 { color: #2c3e50; }
+        table { width: 100%%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>Rapport Hebdomadaire - {{ date }}</h1>
+    <p><strong>Nombre de redémarrages :</strong> {{ restarts }}</p>
+    <p><strong>Moyenne CPU :</strong> {{ avg_cpu }}%</p>
+    <p><strong>Moyenne RAM :</strong> {{ avg_ram }}%</p>
+    <h2>Alertes</h2>
+    <ul>
+        {% for alert in alerts %}
+        <li>{{ alert }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
